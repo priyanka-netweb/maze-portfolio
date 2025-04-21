@@ -1,0 +1,271 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section container">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+            <h1 class="display-4 fw-bold mb-4">AI Solutions for Complex Problems</h1>
+            <h2 class="fw-light mb-4">Machine Learning Engineer & AI Specialist</h2>
+            <p class="lead mb-4">
+                Developing intelligent systems that learn, adapt, and solve real-world challenges using cutting-edge AI and machine learning techniques.
+            </p>
+            <div class="d-flex gap-3">
+                <a href="/projects" class="btn btn-primary">View Projects</a>
+                <a href="/contact" class="btn btn-outline-secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="maze-container">
+                <h2 class="text-center mb-3">Interactive AI Maze Solver</h2>
+                <p class="text-center mb-4">
+                    Explore how different AI algorithms navigate through complex mazes
+                </p>
+                
+                <div class="canvas-container">
+                    <canvas id="mazeCanvas" class="img-fluid"></canvas>
+                </div>
+                
+                <div class="algorithm-controls">
+                    <div class="row g-3">
+                        <div class="col-md-5">
+                            <label for="algorithmSelector" class="form-label">Select Algorithm</label>
+                            <select id="algorithmSelector" class="form-select">
+                                <option value="" disabled selected>Choose an algorithm</option>
+                                <option value="leftWallFollower">Left Wall Follower</option>
+                                <option value="rightWallFollower">Right Wall Follower</option>
+                                <option value="breadthFirstSearch">Breadth-First Search</option>
+                                <option value="depthFirstSearch">Depth-First Search</option>
+                                <option value="aStar">A* Algorithm</option>
+                            </select>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="slider-container">
+                                <label for="speedSlider" class="form-label">Animation Speed</label>
+                                <input type="range" class="form-range" id="speedSlider" min="100" max="1000" value="500">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row g-3 mt-2">
+                        <div class="col">
+                            <div class="d-flex justify-content-between gap-2">
+                                <button id="playPauseButton" class="btn btn-primary flex-grow-1">
+                                    <i class="fas fa-play"></i> Play
+                                </button>
+                                <button id="stepButton" class="btn btn-secondary">
+                                    <i class="fas fa-step-forward"></i> Step
+                                </button>
+                                <button id="resetButton" class="btn btn-secondary">
+                                    <i class="fas fa-undo"></i> Reset
+                                </button>
+                                <button id="generateButton" class="btn btn-secondary">
+                                    <i class="fas fa-random"></i> New Maze
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="algorithm-description mt-3">
+                    <h5>Algorithm Information</h5>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span class="badge rounded-pill badge-left-wall">Left Wall Follower</span>
+                        <span class="badge rounded-pill badge-right-wall">Right Wall Follower</span>
+                        <span class="badge rounded-pill badge-bfs">Breadth-First Search</span>
+                        <span class="badge rounded-pill badge-dfs">Depth-First Search</span>
+                        <span class="badge rounded-pill badge-astar">A* Search</span>
+                    </div>
+                    <p class="small">
+                        These algorithms demonstrate different approaches to pathfinding in mazes:
+                    </p>
+                    <ul class="small">
+                        <li><strong>Wall Followers</strong> - Simple algorithms that follow the left or right wall until reaching the exit. Only works in simply connected mazes.</li>
+                        <li><strong>Breadth-First Search (BFS)</strong> - Guarantees the shortest path by exploring all possible routes level by level.</li>
+                        <li><strong>Depth-First Search (DFS)</strong> - Explores as far as possible along a branch before backtracking. May not find the shortest path.</li>
+                        <li><strong>A* Search</strong> - An informed search algorithm that uses a heuristic to guide exploration towards the goal. Efficient and optimal.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="container py-5">
+    <h2 class="text-center mb-5">Featured AI/ML Projects</h2>
+    
+    <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-md-4">
+            <div class="card project-card">
+                <div class="card-body">
+                    <h5 class="card-title">Computer Vision Object Detection</h5>
+                    <span class="badge bg-info mb-2">Deep Learning</span>
+                    <p class="card-text">
+                        Built a real-time object detection system using YOLO and TensorFlow that identifies and tracks multiple objects in video streams.
+                    </p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    <a href="/projects" class="btn btn-sm btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="col-md-4">
+            <div class="card project-card">
+                <div class="card-body">
+                    <h5 class="card-title">NLP Sentiment Analysis</h5>
+                    <span class="badge bg-warning mb-2">Natural Language</span>
+                    <p class="card-text">
+                        Developed a sentiment analysis model using BERT that achieves 94% accuracy on customer reviews across multiple domains.
+                    </p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    <a href="/projects" class="btn btn-sm btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="col-md-4">
+            <div class="card project-card">
+                <div class="card-body">
+                    <h5 class="card-title">Reinforcement Learning Agent</h5>
+                    <span class="badge bg-success mb-2">Reinforcement Learning</span>
+                    <p class="card-text">
+                        Created an RL agent using DQN that learns to play Atari games at human-level performance with minimal supervision.
+                    </p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    <a href="/projects" class="btn btn-sm btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center mt-5">
+        <a href="/projects" class="btn btn-primary">View All Projects</a>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="container py-5">
+    <h2 class="text-center mb-5">My AI/ML Expertise</h2>
+    
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <h3 class="h4 mb-4">Machine Learning</h3>
+            
+            <div class="skill-item">
+                <div class="d-flex justify-content-between mb-1">
+                    <span>Supervised Learning</span>
+                    <span>95%</span>
+                </div>
+                <div class="progress skill-progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="d-flex justify-content-between mb-1">
+                    <span>Unsupervised Learning</span>
+                    <span>90%</span>
+                </div>
+                <div class="progress skill-progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="d-flex justify-content-between mb-1">
+                    <span>Reinforcement Learning</span>
+                    <span>85%</span>
+                </div>
+                <div class="progress skill-progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+            <h3 class="h4 mb-4">Deep Learning</h3>
+            
+            <div class="skill-item">
+                <div class="d-flex justify-content-between mb-1">
+                    <span>Convolutional Networks</span>
+                    <span>90%</span>
+                </div>
+                <div class="progress skill-progress">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="d-flex justify-content-between mb-1">
+                    <span>Recurrent Networks</span>
+                    <span>85%</span>
+                </div>
+                <div class="progress skill-progress">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="d-flex justify-content-between mb-1">
+                    <span>Transformers</span>
+                    <span>80%</span>
+                </div>
+                <div class="progress skill-progress">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+            <h3 class="h4 mb-4">Tools & Technologies</h3>
+            
+            <div class="skill-item">
+                <div class="d-flex justify-content-between mb-1">
+                    <span>TensorFlow / Keras</span>
+                    <span>95%</span>
+                </div>
+                <div class="progress skill-progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="d-flex justify-content-between mb-1">
+                    <span>PyTorch</span>
+                    <span>90%</span>
+                </div>
+                <div class="progress skill-progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="d-flex justify-content-between mb-1">
+                    <span>Scikit-Learn</span>
+                    <span>95%</span>
+                </div>
+                <div class="progress skill-progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<!-- Maze game scripts -->
+<script src="{{ url_for('static', filename='js/algorithms/leftWallFollower.js') }}"></script>
+<script src="{{ url_for('static', filename='js/algorithms/rightWallFollower.js') }}"></script>
+<script src="{{ url_for('static', filename='js/algorithms/breadthFirstSearch.js') }}"></script>
+<script src="{{ url_for('static', filename='js/algorithms/depthFirstSearch.js') }}"></script>
+<script src="{{ url_for('static', filename='js/algorithms/aStar.js') }}"></script>
+<script src="{{ url_for('static', filename='js/maze.js') }}"></script>
+{% endblock %}

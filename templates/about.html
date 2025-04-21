@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="display-4 fw-bold text-center mb-5">About Me</h1>
+            
+            <div class="card mb-5">
+                <div class="card-body p-4">
+                    <div class="row">
+                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                            <div class="bg-dark p-3 rounded-circle mx-auto mb-3" style="width: 150px; height: 150px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user-circle fa-5x text-primary"></i>
+                            </div>
+                            <h2 class="h4 mb-0">John Doe</h2>
+                            <p class="text-muted">AI/ML Engineer</p>
+                            <div class="d-flex justify-content-center social-icons mt-3">
+                                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h3 class="h5 mb-3">Professional Profile</h3>
+                            <p>
+                                I'm a Machine Learning Engineer and AI Specialist with over 5 years of experience developing and deploying ML models in production environments. 
+                                My expertise spans computer vision, natural language processing, and reinforcement learning.
+                            </p>
+                            <p>
+                                I'm passionate about creating AI solutions that address real-world problems and make complex technologies accessible to everyone.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mt-4">
+                                <span class="badge bg-primary">Machine Learning</span>
+                                <span class="badge bg-info">Deep Learning</span>
+                                <span class="badge bg-secondary">Computer Vision</span>
+                                <span class="badge bg-warning">NLP</span>
+                                <span class="badge bg-success">Reinforcement Learning</span>
+                                <span class="badge bg-danger">MLOps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="h3 mb-4">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3 class="h5 mb-0">Senior Machine Learning Engineer</h3>
+                    <p class="text-muted mb-2">TechAI Inc. | 2021 - Present</p>
+                    <p>
+                        Leading a team of 5 ML engineers to develop and deploy computer vision and NLP solutions for enterprise clients. 
+                        Designed and implemented a real-time object detection system that improved accuracy by 25% over the previous solution.
+                    </p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3 class="h5 mb-0">Machine Learning Engineer</h3>
+                    <p class="text-muted mb-2">DataSmart Solutions | 2019 - 2021</p>
+                    <p>
+                        Developed recommendation systems and predictive analytics solutions for e-commerce platforms. 
+                        Created a hybrid recommendation engine that increased click-through rates by 18% and customer engagement by 22%.
+                    </p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3 class="h5 mb-0">Data Scientist</h3>
+                    <p class="text-muted mb-2">Analytics Co | 2017 - 2019</p>
+                    <p>
+                        Analyzed large datasets and built predictive models to support business decision-making. 
+                        Implemented an anomaly detection system that reduced fraud by 35% for a financial services client.
+                    </p>
+                </div>
+            </div>
+            
+            <h2 class="h3 mt-5 mb-4">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3 class="h5 mb-0">Master of Science in Machine Learning</h3>
+                    <p class="text-muted mb-2">Stanford University | 2015 - 2017</p>
+                    <p>
+                        Thesis: "Attention Mechanisms in Neural Networks for Computer Vision Tasks"
+                    </p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3 class="h5 mb-0">Bachelor of Science in Computer Science</h3>
+                    <p class="text-muted mb-2">MIT | 2011 - 2015</p>
+                    <p>
+                        Focus on artificial intelligence and algorithms. Graduated with honors.
+                    </p>
+                </div>
+            </div>
+            
+            <h2 class="h3 mt-5 mb-4">Certifications</h2>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">TensorFlow Developer Certification</h3>
+                            <p class="card-text text-muted">Google | 2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Deep Learning Specialization</h3>
+                            <p class="card-text text-muted">Coursera/DeepLearning.AI | 2021</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">AWS Certified Machine Learning Specialty</h3>
+                            <p class="card-text text-muted">Amazon Web Services | 2020</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Professional Machine Learning Engineer</h3>
+                            <p class="card-text text-muted">Google Cloud | 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="h3 mt-5 mb-4">Publications & Research</h2>
+            <div class="list-group">
+                <div class="list-group-item bg-dark">
+                    <h3 class="h5 mb-1">Efficient Transformers for Vision Applications</h3>
+                    <p class="text-muted small mb-2">IEEE Conference on Computer Vision and Pattern Recognition (CVPR) | 2022</p>
+                    <p class="mb-0">Proposed a novel attention mechanism that reduces computational complexity while maintaining accuracy for vision tasks.</p>
+                </div>
+                
+                <div class="list-group-item bg-dark">
+                    <h3 class="h5 mb-1">Reinforcement Learning for Resource Allocation in Cloud Computing</h3>
+                    <p class="text-muted small mb-2">International Conference on Machine Learning (ICML) | 2020</p>
+                    <p class="mb-0">Developed an RL-based approach for optimizing resource allocation in cloud environments, resulting in 30% reduction in costs.</p>
+                </div>
+                
+                <div class="list-group-item bg-dark">
+                    <h3 class="h5 mb-1">A Comparative Study of Neural Architectures for Sentiment Analysis</h3>
+                    <p class="text-muted small mb-2">Journal of Artificial Intelligence Research | 2019</p>
+                    <p class="mb-0">Evaluated various neural network architectures for sentiment analysis tasks across multiple domains and languages.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

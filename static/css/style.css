@@ -1,0 +1,209 @@
+/* Main Styling for AI/ML Portfolio */
+
+/* Additional Custom Styles */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.maze-container {
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--bs-dark);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+
+.algorithm-controls {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background: var(--bs-dark);
+}
+
+.maze-caption {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: var(--bs-gray-500);
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.project-card {
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .card-body {
+    flex: 1;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: -30px;
+    width: 2px;
+    background-color: var(--bs-primary);
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--bs-primary);
+}
+
+.timeline-item:last-child::before {
+    bottom: 0;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--bs-gray-800);
+    margin-right: 10px;
+    color: var(--bs-light);
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--bs-primary);
+    transform: scale(1.1);
+}
+
+.footer {
+    margin-top: 50px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .hero-section {
+        min-height: 70vh;
+    }
+    
+    .timeline-item {
+        padding-left: 35px;
+    }
+    
+    .timeline-item::before {
+        left: 15px;
+    }
+    
+    .timeline-item::after {
+        left: 9px;
+    }
+}
+
+/* Algorithm descriptions */
+.algorithm-description {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background: var(--bs-gray-800);
+}
+
+.algorithm-description h5 {
+    border-bottom: 1px solid var(--bs-gray-700);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Custom slider styling */
+.slider-container {
+    margin: 15px 0;
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 5px;
+    background: var(--bs-gray-600);
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    border-radius: 5px;
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--bs-primary);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--bs-primary);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Colorful algorithm badges */
+.badge-left-wall {
+    background-color: #1976D2;
+}
+
+.badge-right-wall {
+    background-color: #8E24AA;
+}
+
+.badge-bfs {
+    background-color: #FF9800;
+}
+
+.badge-dfs {
+    background-color: #2E7D32;
+}
+
+.badge-astar {
+    background-color: #00BCD4;
+}

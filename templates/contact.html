@@ -1,0 +1,215 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h1 class="display-4 fw-bold text-center mb-5">Get In Touch</h1>
+            
+            <div class="row g-4 mb-5">
+                <!-- Contact Methods -->
+                <div class="col-md-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div class="bg-primary bg-opacity-10 rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fas fa-envelope fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="h5 card-title">Email</h3>
+                            <p class="card-text">contact@example.com</p>
+                            <a href="mailto:contact@example.com" class="btn btn-sm btn-outline-primary">Send Email</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div class="bg-success bg-opacity-10 rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fab fa-linkedin fa-2x text-success"></i>
+                            </div>
+                            <h3 class="h5 card-title">LinkedIn</h3>
+                            <p class="card-text">Connect professionally</p>
+                            <a href="https://www.linkedin.com/" target="_blank" class="btn btn-sm btn-outline-success">Connect</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <div class="bg-info bg-opacity-10 rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                <i class="fab fa-github fa-2x text-info"></i>
+                            </div>
+                            <h3 class="h5 card-title">GitHub</h3>
+                            <p class="card-text">Check out my code</p>
+                            <a href="https://github.com/" target="_blank" class="btn btn-sm btn-outline-info">Follow</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="card">
+                <div class="card-body p-4">
+                    <h2 class="h3 mb-4">Send Me a Message</h2>
+                    
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="nameInput" placeholder="Your Name">
+                                    <label for="nameInput">Your Name</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="emailInput" placeholder="Your Email">
+                                    <label for="emailInput">Your Email</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="subjectInput" placeholder="Subject">
+                                    <label for="subjectInput">Subject</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="messageInput" placeholder="Your Message" style="height: 150px"></textarea>
+                                    <label for="messageInput">Your Message</label>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Availability -->
+            <div class="card mt-4">
+                <div class="card-body p-4">
+                    <h2 class="h3 mb-3">Currently Available For</h2>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-success rounded-circle p-2 me-3">
+                                    <i class="fas fa-check text-white"></i>
+                                </div>
+                                <span>Freelance Projects</span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-success rounded-circle p-2 me-3">
+                                    <i class="fas fa-check text-white"></i>
+                                </div>
+                                <span>Technical Consulting</span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-success rounded-circle p-2 me-3">
+                                    <i class="fas fa-check text-white"></i>
+                                </div>
+                                <span>Research Collaboration</span>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-success rounded-circle p-2 me-3">
+                                    <i class="fas fa-check text-white"></i>
+                                </div>
+                                <span>Speaking Engagements</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ -->
+            <div class="mt-5">
+                <h2 class="h3 mb-4">Frequently Asked Questions</h2>
+                
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What services do you offer?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                I offer a range of AI/ML services including custom model development, ML pipeline optimization, technical consulting, and training/workshops. My expertise spans computer vision, NLP, and reinforcement learning applications.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How long does a typical ML project take?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Project timelines vary significantly based on complexity, data availability, and specific requirements. A proof of concept might take 2-4 weeks, while a production-ready system could take 3-6 months. I'll provide a detailed timeline estimate after understanding your specific project needs.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faqThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Do you offer ongoing support after project completion?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, I offer several support options including maintenance contracts, model retraining schedules, and knowledge transfer sessions. I can also help set up monitoring systems to ensure your ML solutions continue performing optimally over time.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Simple form validation and submission handling
+        const contactForm = document.querySelector('form');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('nameInput');
+            const emailInput = document.getElementById('emailInput');
+            const messageInput = document.getElementById('messageInput');
+            
+            // Very basic validation
+            if (!nameInput.value || !emailInput.value || !messageInput.value) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // In a real application, this would send the form data to the server
+            // For this demo, we'll just show a success message
+            alert('Thanks for your message! In a real application, this would be sent to the server.');
+            
+            // Clear the form
+            contactForm.reset();
+        });
+    });
+</script>
+{% endblock %}

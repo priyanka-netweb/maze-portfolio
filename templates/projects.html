@@ -1,0 +1,202 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <header class="text-center mb-5">
+        <h1 class="display-4 fw-bold">AI/ML Projects</h1>
+        <p class="lead">Explore my portfolio of machine learning and artificial intelligence projects</p>
+    </header>
+    
+    <!-- Project Filter -->
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+                <button class="btn btn-outline-primary active filter-btn" data-filter="all">All Projects</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="deep-learning">Deep Learning</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="nlp">Natural Language</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="computer-vision">Computer Vision</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="reinforcement">Reinforcement Learning</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Projects Grid -->
+    <div class="row g-4">
+        <!-- Computer Vision Project -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="computer-vision deep-learning">
+            <div class="card project-card">
+                <div class="card-body">
+                    <h5 class="card-title">Real-time Object Detection</h5>
+                    <div class="mb-3">
+                        <span class="badge bg-info">Deep Learning</span>
+                        <span class="badge bg-secondary">Computer Vision</span>
+                    </div>
+                    <p class="card-text">
+                        Built a real-time object detection system using YOLO and TensorFlow that identifies and tracks multiple objects in video streams with high accuracy.
+                    </p>
+                    <p><strong>Technologies:</strong> TensorFlow, YOLO, OpenCV, Python</p>
+                </div>
+                <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Demo</a>
+                        <a href="https://github.com/" target="_blank" class="btn btn-sm btn-outline-secondary">GitHub</a>
+                    </div>
+                    <small class="text-muted">Mar 2023</small>
+                </div>
+            </div>
+        </div>
+        
+        <!-- NLP Project -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="nlp deep-learning">
+            <div class="card project-card">
+                <div class="card-body">
+                    <h5 class="card-title">Sentiment Analysis System</h5>
+                    <div class="mb-3">
+                        <span class="badge bg-warning">NLP</span>
+                        <span class="badge bg-info">Deep Learning</span>
+                    </div>
+                    <p class="card-text">
+                        Developed a sentiment analysis model using BERT that achieves 94% accuracy on customer reviews across multiple domains and languages.
+                    </p>
+                    <p><strong>Technologies:</strong> PyTorch, BERT, Hugging Face, Flask</p>
+                </div>
+                <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Demo</a>
+                        <a href="https://github.com/" target="_blank" class="btn btn-sm btn-outline-secondary">GitHub</a>
+                    </div>
+                    <small class="text-muted">Jan 2023</small>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Reinforcement Learning Project -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="reinforcement deep-learning">
+            <div class="card project-card">
+                <div class="card-body">
+                    <h5 class="card-title">RL Agent for Atari Games</h5>
+                    <div class="mb-3">
+                        <span class="badge bg-success">Reinforcement Learning</span>
+                        <span class="badge bg-info">Deep Learning</span>
+                    </div>
+                    <p class="card-text">
+                        Created a reinforcement learning agent using DQN that learns to play Atari games at human-level performance with minimal supervision.
+                    </p>
+                    <p><strong>Technologies:</strong> TensorFlow, OpenAI Gym, DQN, Python</p>
+                </div>
+                <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Demo</a>
+                        <a href="https://github.com/" target="_blank" class="btn btn-sm btn-outline-secondary">GitHub</a>
+                    </div>
+                    <small class="text-muted">Nov 2022</small>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Time Series Project -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="deep-learning">
+            <div class="card project-card">
+                <div class="card-body">
+                    <h5 class="card-title">Time Series Forecasting</h5>
+                    <div class="mb-3">
+                        <span class="badge bg-primary">Machine Learning</span>
+                        <span class="badge bg-info">Deep Learning</span>
+                    </div>
+                    <p class="card-text">
+                        Implemented advanced time series forecasting models using LSTM and Transformer architectures for financial market prediction.
+                    </p>
+                    <p><strong>Technologies:</strong> TensorFlow, Keras, LSTM, Transformers</p>
+                </div>
+                <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Demo</a>
+                        <a href="https://github.com/" target="_blank" class="btn btn-sm btn-outline-secondary">GitHub</a>
+                    </div>
+                    <small class="text-muted">Sep 2022</small>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Image Generation Project -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="computer-vision deep-learning">
+            <div class="card project-card">
+                <div class="card-body">
+                    <h5 class="card-title">Image Generation with GANs</h5>
+                    <div class="mb-3">
+                        <span class="badge bg-secondary">Computer Vision</span>
+                        <span class="badge bg-info">Deep Learning</span>
+                    </div>
+                    <p class="card-text">
+                        Built a generative adversarial network (GAN) for creating photorealistic images from textual descriptions with fine control.
+                    </p>
+                    <p><strong>Technologies:</strong> PyTorch, GANs, StyleGAN, CLIP</p>
+                </div>
+                <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Demo</a>
+                        <a href="https://github.com/" target="_blank" class="btn btn-sm btn-outline-secondary">GitHub</a>
+                    </div>
+                    <small class="text-muted">Jul 2022</small>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recommendation System Project -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="deep-learning">
+            <div class="card project-card">
+                <div class="card-body">
+                    <h5 class="card-title">Recommendation System</h5>
+                    <div class="mb-3">
+                        <span class="badge bg-primary">Machine Learning</span>
+                        <span class="badge bg-danger">Recommendation</span>
+                    </div>
+                    <p class="card-text">
+                        Developed a hybrid recommendation system combining collaborative filtering and content-based approaches for a streaming platform.
+                    </p>
+                    <p><strong>Technologies:</strong> Python, TensorFlow, SQL, Matrix Factorization</p>
+                </div>
+                <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Demo</a>
+                        <a href="https://github.com/" target="_blank" class="btn btn-sm btn-outline-secondary">GitHub</a>
+                    </div>
+                    <small class="text-muted">May 2022</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project filtering script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                projectItems.forEach(item => {
+                    if (filterValue === 'all') {
+                        item.style.display = 'block';
+                    } else {
+                        const categories = item.getAttribute('data-category').split(' ');
+                        if (categories.includes(filterValue)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    });
+</script>
+{% endblock %}
